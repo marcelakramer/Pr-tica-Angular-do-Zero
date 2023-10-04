@@ -1,0 +1,87 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  h1 {
+    color: #1338ef;
+    margin: 15px 15px 40px 250px;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  #totalDeLivros {
+    margin-left: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #1338ef;
+  }
+  
+  label {
+    padding: 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+  
+  mat-form-field {
+    color: #1338ef;
+    margin: 50px 0 15px 15px;
+  }
+
+  #buttons {
+    margin-left: 200px;
+  }
+  
+  button {
+    margin: 7px;
+    cursor: pointer;
+  }
+
+  #cadastrar{
+    background-color: #1338ef;
+  }
+
+  #selecionar, #remover {
+    color: #1338ef;
+  }
+  
+  .mensagem-erro {
+    color: #d32f2f;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0 0 15px;
+  }
+  
+  .example-card {
+    width: 250px;
+    margin: 20px 0 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  input {
+    padding: 5px;
+    border: 1px solid #b1b1b1;
+    border-radius: 5px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  li {
+    margin: 5px;
+    font-size: 16px;
+    color: #1338ef;
+  }
+
+  #cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 40%;
+  }
+
+  #pesquisar {
+    width: 200px;
+    margin-left: 15px;
+  }

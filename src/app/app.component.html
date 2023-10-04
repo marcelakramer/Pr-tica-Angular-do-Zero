@@ -1,0 +1,59 @@
+<h1>Livros</h1>
+
+<label id="totalDeLivros" [matBadge]="livros.length" matBadgeOverlap="true">Total de livros</label>
+
+<br>
+
+<mat-form-field>
+  <label>ISBN:</label>
+  <input matInput [(ngModel)]="livroTratamento.isbn" placeholder="Digite o ISBN">
+</mat-form-field>
+
+<mat-form-field>
+  <label>Título:</label>
+  <input matInput [(ngModel)]="livroTratamento.titulo" placeholder="Digite o título">
+</mat-form-field>
+
+<mat-form-field>
+  <label>Autor:</label>
+  <input matInput [(ngModel)]="livroTratamento.autor" placeholder="Digite o autor">
+</mat-form-field>
+
+<br>
+<div id="buttons">
+  <button id="cadastrar" mat-raised-button color="primary" (click)="cadastrarLivro()">Cadastrar</button>
+  <button class="editar" mat-raised-button (click)="editarLivro()">Editar</button>
+</div>
+
+<br>
+
+<div class="mensagem-erro">{{mensagemErro}}</div>
+
+<br>
+
+<div id="cards">
+  <mat-card class="example-card" *ngFor="let livro of livros">
+    <mat-card-header>
+      <mat-card-title>{{livro.titulo}}</mat-card-title>
+      <mat-card-subtitle>{{livro.isbn}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>O autor desse livro é {{livro.autor}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button id="remover" mat-stroked-button (click)="removerLivro(livro)">APAGAR</button>
+      <button id="selecionar" mat-stroked-button (click)="selecionarLivro(livro)">SELECIONAR</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<br>
+
+<label>Pesquisar por Número de Série:</label>
+<input id="pesquisar" (keyup)="pesquisarLivro(inputPesquisa.value)" #inputPesquisa>
+
+<ul>
+  <li *ngFor="let livro of livrosPesquisa">
+    {{livro.isbn}} - {{livro.titulo | titlecase}} {{livro.autor | titlecase}}
+  </li>
+</ul>
